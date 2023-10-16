@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="YourTextStyle">
+        <item name="android:textStyle">normal</item>
+        <!-- Другие атрибуты стиля -->
+    </style>
+
+
+
+</resources>
