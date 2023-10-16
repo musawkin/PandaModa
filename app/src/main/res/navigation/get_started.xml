@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/get_started"
+    app:startDestination="@id/welcomeFragment">
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="com.example.pandamoda.IntroFragment"
+        android:label="fragment_intro"
+        tools:layout="@layout/fragment_intro" >
+        <action
+            android:id="@+id/action_introFragment_to_auth_nav"
+            app:destination="@id/auth_nav" />
+        <action
+            android:id="@+id/action_introFragment_to_main_pages"
+            app:destination="@id/main_pages" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.pandamoda.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_introFragment"
+            app:destination="@id/introFragment" />
+    </fragment>
+    <include app:graph="@navigation/auth_nav" />
+    <include app:graph="@navigation/main_pages" />
+</navigation>
