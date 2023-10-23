@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/get_started"
-    app:startDestination="@id/welcomeFragment">
+    app:startDestination="@id/createNewPasswordFragment">
     <fragment
         android:id="@+id/introFragment"
         android:name="com.example.pandamoda.IntroFragment"
@@ -27,4 +27,21 @@
     </fragment>
     <include app:graph="@navigation/auth_nav" />
     <include app:graph="@navigation/main_pages" />
+    <fragment
+        android:id="@+id/verificationCodeFragment4"
+        android:name="com.example.pandamoda.Authorization.VerificationCodeFragment"
+        android:label="fragment_verification_code"
+        tools:layout="@layout/fragment_verification_code" />
+    <fragment
+        android:id="@+id/createNewPasswordFragment"
+        android:name="com.example.pandamoda.Authorization.CreateNewPasswordFragment"
+        android:label="fragment_create_new_password"
+        tools:layout="@layout/fragment_create_new_password" >
+
+    </fragment>
+    <dialog
+        android:id="@+id/authButtomSheetFragment"
+        android:name="com.example.pandamoda.Authorization.AuthButtomSheetFragment"
+        android:label="fragment_auth_buttom_sheet"
+        tools:layout="@layout/fragment_auth_buttom_sheet" />
 </navigation>

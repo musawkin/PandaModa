@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">PandaModa</string>
     <!-- TODO: Remove or change this placeholder text -->
+    <string name="log_in"><u>Log In</u></string>
+    <string name="sign_up"><u>Sign Up</u></string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgot_password">Enter email associated with your account and we’ll send and email with intructions to reset your password</string>
 </resources>

@@ -1,0 +1,166 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:padding="32dp"
+    tools:context=".Authorization.VerificationCodeFragment">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btFabVerification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="39dp"
+        app:fabSize="normal"
+        android:src="@drawable/ic_back_new"
+        app:backgroundTint="@color/white"
+        app:elevation="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:maxImageSize="19dp"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.FloatingActionButton" />
+
+
+    <TextView
+        android:id="@+id/tvForgotPass2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="34dp"
+        android:fontFamily="@font/kreadon_demi"
+        android:text="Verification code"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btFabVerification" />
+
+
+    <TextView
+        android:id="@+id/tvForgotPassContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#D6D6D6"
+        android:fontFamily="@font/kreadon_light"
+        android:hint="Please enter the verification code we sent to your email address"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPass2" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="@+id/tvForgotPassContent"
+        app:layout_constraintStart_toStartOf="@+id/tvForgotPassContent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassContent">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etVerificationCode1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_for_back"
+            android:digits="0123456789"
+            android:fontFamily="@font/kreadon_demi"
+            android:inputType="number"
+            android:maxLength="1"
+            android:paddingStart="27dp"
+            android:text=""
+            android:textColorHint="#020202"
+            android:textSize="27sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etVerificationCode2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_for_back"
+            android:digits="0123456789"
+            android:fontFamily="@font/kreadon_demi"
+            android:inputType="number"
+            android:maxLength="1"
+            android:paddingStart="27dp"
+            android:text=""
+            android:textColorHint="#020202"
+            android:textSize="27sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etVerificationCode3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_for_back"
+            android:digits="0123456789"
+            android:fontFamily="@font/kreadon_demi"
+            android:inputType="number"
+            android:maxLength="1"
+            android:padding="0dp"
+            android:paddingStart="27dp"
+            android:text="5"
+            android:textColorHint="#020202"
+            android:textSize="27sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etVerificationCode4"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_for_back"
+            android:digits="0123456789"
+            android:fontFamily="@font/kreadon_demi"
+            android:inputType="number"
+            android:maxLength="1"
+            android:paddingStart="27dp"
+            android:text=""
+            android:textColorHint="#020202"
+            android:textSize="27sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvResentIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:alpha="0.5"
+        android:fontFamily="@font/kreadon_regular"
+        android:text="Resend in"
+        android:textColor="#121420"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <TextView
+        android:id="@+id/tvResentInTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/kreadon_regular"
+        android:text="00:10"
+        android:textColor="#121420"
+        android:inputType="date"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvResentIn"
+        app:layout_constraintStart_toEndOf="@+id/tvResentIn"
+        app:layout_constraintTop_toTopOf="@+id/tvResentIn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

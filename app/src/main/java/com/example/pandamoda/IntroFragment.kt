@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.findFragment
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.pandamoda.databinding.FragmentIntroBinding
@@ -65,6 +68,11 @@ class IntroFragment : Fragment() {
             }
         }
         binding?.introViewPager?.registerOnPageChangeCallback(onPageChangeCallback)
+        binding?.btShoppingNow?.setOnClickListener {
+            findNavController().navigate(R.id.action_introFragment_to_auth_nav)
+        }
+
+
 
     }
 
